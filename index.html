@@ -2,98 +2,222 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animesh Mahat - Portfolio</title>
-
+    <title>Your Interactive Portfolio</title>
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-
-    <link rel="stylesheet" href="/assets/styles.css" />
-
-    <link rel="stylesheet" href="/assets/index-d526a0c5.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
-    <div class="container mt-5">
-      <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand ml-5" href="#">
         <img
-          src="/assets/profile.jpg"
+          src="assets/profile.jpg"
           alt="Your Name"
-          style="max-width: 200px; border-radius: 50%"
+          style="max-width: 40px; border-radius: 50%"
         />
+        &nbsp;Animesh Mahat
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto mr-5">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-        <h1 style="color: #007bff">Animesh Mahat</h1>
-        <p style="color: #6c757d">Web Developer</p>
-      </header>
-
-      <section class="mt-4">
-        <h2 style="color: #28a745">About Me</h2>
-        <p>
-          Welcome to my portfolio! I am a passionate web developer with
-          expertise in building modern and responsive web applications.
-        </p>
-      </section>
-
-      <section class="mt-4">
-        <h2 style="color: #dc3545">Projects</h2>
-        <div class="card project-card">
-          <div class="card-body">
-            <h5 class="card-title">Project 1</h5>
-            <p class="card-text">Description of Project 1.</p>
-          </div>
+    <section id="about" class="container mt-3">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>About Me</h2>
+          <hr />
+          <p>
+            Add a brief description about yourself, your interests, and your
+            career goals.
+          </p>
         </div>
+      </div>
+    </section>
 
-        <div class="card mt-3 project-card">
-          <div class="card-body">
-            <h5 class="card-title">Project 2</h5>
-            <p class="card-text">Description of Project 2.</p>
-          </div>
+    <section id="skills" class="container mt-5">
+      <h2>Skills</h2>
+      <hr />
+      <div class="row">
+        <div class="col-md-6">
+          <p><i class="fab fa-html5"></i>&nbsp; HTML5</p>
         </div>
-      </section>
+        <div class="col-md-6">
+          <p><i class="fab fa-css3"></i>&nbsp; CSS3</p>
+        </div>
+        <div class="col-md-6">
+          <p><i class="fab fa-js"></i>&nbsp; JavaScript</p>
+        </div>
+        <div class="col-md-6">
+          <p><i class="fab fa-php"></i>&nbsp; PHP</p>
+        </div>
+        <div class="col-md-6">
+          <p><i class="fab fa-bootstrap"></i>&nbsp; Bootstrap</p>
+        </div>
+      </div>
+    </section>
 
-      <section class="mt-4">
-        <h2 style="color: #007bff">Contact</h2>
-        <p>
-          Email:
-          <a href="mailto:mahatanimesh333@gmail.com" style="color: #007bff"
-            >mahatanimesh333@gmail.com/a
-          >
-        </p>
-        <!-- Replace Discord link with GitHub link -->
-        <p>
-          GitHub:
+    <section id="projects" class="container mt-5">
+      <h2>Projects</h2>
+      <hr />
+      <div
+        class="card project-card"
+        data-toggle="modal"
+        data-target="#projectModal1"
+      >
+        <div class="card-body">
+          <h5 class="card-title">Weather App</h5>
+          <hr />
+          <p class="card-text">
+            A simple weather application for android built using java in Android
+            Studio.
+            <br />OpenWeather Api used to fetch the weather information.
+          </p>
           <a
-            href="https://github.com/animeshmahat"
+            href="https://github.com/animeshmahat/WeatherApp"
+            class="btn btn-outline-primary"
             target="_blank"
-            style="color: #007bff"
-            >animeshmahat</a
+            >GitHub</a
           >
-        </p>
-        <!-- Add other contact information as needed -->
-      </section>
-    </div>
+        </div>
+      </div>
 
-    <!-- Bootstrap JS and Popper.js -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" crossorigin src="/assets/index-1ce67b45.js"></script>
-    <script src="/assets/scripts.js"></script>
+      <div
+        class="card project-card"
+        data-toggle="modal"
+        data-target="#projectModal2"
+      >
+        <div class="card-body">
+          <h5 class="card-title">WatchStore</h5>
+          <hr />
+          <p class="card-text">
+            A ecommerce website for watches.<br />
+            Php with mysql.
+          </p>
+          <a
+            href="https://github.com/animeshmahat/watchstore"
+            class="btn btn-outline-primary"
+            target="_blank"
+            >GitHub</a
+          >
+        </div>
+      </div>
+
+      <div
+        class="card project-card"
+        data-toggle="modal"
+        data-target="#projectModal3"
+      >
+        <div class="card-body">
+          <h5 class="card-title">Premier League Match Predictor</h5>
+          <hr />
+          <p class="card-text">
+            A flask application that displays premier league match predictions.
+          </p>
+          <a
+            href="https://github.com/animeshmahat/Premier-League-Match-Predictions"
+            class="btn btn-outline-primary"
+            target="_blank"
+            >GitHub</a
+          >
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="projectModal1"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="projectModalLabel1"
+        aria-hidden="true"
+      ></div>
+
+      <div
+        class="modal fade"
+        id="projectModal2"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="projectModalLabel2"
+        aria-hidden="true"
+      ></div>
+
+      <div
+        class="modal fade"
+        id="projectModal3"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="projectModalLabel3"
+        aria-hidden="true"
+      ></div>
+    </section>
+
+    <section id="contact" class="container mt-5">
+      <h2>Contact Me</h2>
+      <hr />
+      <div class="row">
+        <div class="col-md-6">
+          <p>
+            <i class="fas fa-envelope"></i> Email:
+            <strong> mahatanimesh333@gmail.com </strong>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p>
+            <i class="fab fa-github"></i> GitHub:
+            <a href="https://github.com/animeshmahat" target="_blank"
+              >github.com/yourusername</a
+            >
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p>
+            <i class="fab fa-instagram"></i> Instagram:
+            <a href="https://www.instagram.com/animesh_mahat" target="_blank"
+              >instagram.com/your_instagram_username</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center p-3 mt-5 bg-dark text-white">
+      animeshmahat &copy; 2024
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/scripts.js"></script>
   </body>
 </html>
